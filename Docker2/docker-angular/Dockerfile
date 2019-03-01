@@ -21,12 +21,12 @@ RUN ng build --prod
 
 ########################## Stage 2 - DOTNET CORE ############################
 FROM microsoft/dotnet:2.2-sdk AS aspnetcore-build
+WORKDIR /app
 # copy csproj and restore as distinct layers
-#COPY *.csproj ./
-#RUN dotnet restore --no-cache
-
-# copy and publish app
 COPY *.csproj ./
+RUN dotnet restore --no-cache
+
+# Copy source code & app configs
 COPY *.json ./
 COPY *.cs ./
 COPY Controllers/. ./Controllers/
