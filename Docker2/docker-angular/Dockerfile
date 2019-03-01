@@ -27,6 +27,7 @@ FROM microsoft/dotnet:2.2-sdk AS aspnetcore-build
 
 # copy and publish app
 COPY *.csproj ./
+COPY *.json ./
 COPY *.cs ./
 COPY Controllers/. ./Controllers/
 COPY Pages/. ./Pages/
