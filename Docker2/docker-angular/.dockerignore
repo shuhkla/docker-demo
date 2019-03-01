@@ -1,0 +1,44 @@
+.dockerignore
+.env
+.git
+.gitignore
+.vs
+.vscode
+*/bin
+*/obj
+**/.toolstarget
+
+# directories
+**/bin/
+**/obj/
+**/out/
+**/dist/
+
+# files
+Dockerfile*
+**/*.trx
+**/*.md
+**/*.ps1
+**/*.cmd
+**/*.sh
+
+# OS generated files #
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Node Files #
+**/node_modules
+node_modules
+npm-debug.log
+npm-debug.log.*
+
+# Typing #
+src/typings/tsd
+typings
+tsd_typings
+
+.git
+.gitignore
+.vs
